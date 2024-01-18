@@ -48,7 +48,7 @@ class Queries {
                 $query .= "ORDER BY orders.cost DESC";
                 break;
 
-            default:
+            case "default":
                 $query .= "ORDER BY order_id ASC";
                 break;
         }

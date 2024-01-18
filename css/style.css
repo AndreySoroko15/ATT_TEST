@@ -2,9 +2,13 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.orders_table {
+.container {
     width: 90%;
     margin: auto;
+}
+
+.orders_table {
+    width: 100%;
 }
 
 .orders_table > caption {
@@ -39,4 +43,8 @@ tbody {
 
 .orders_table > tbody {
     background: #f5ffff;
+}
+
+#sorting_form {
+    margin-bottom: 5px;
 }
