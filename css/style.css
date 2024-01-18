@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.orders_table {
+    width: 90%;
+    margin: auto;
+}
+
+.orders_table > caption {
+    text-align: left;
+    font-size: larger;
+    margin-left: 1%;
+}
+
+tbody td {
+    border: 1px solid #eee6f8;
+}
+
+tbody {
+    border-top: none !important;
+}
+
+.orders_table, td, th {
+    border-collapse: collapse;
+    padding: 1%;
+}
+
+.orders_table > thead {
+    border: 2px solid rgb(94, 94, 94);
+    background: linear-gradient(rgb(164, 163, 179), rgb(82, 82, 119));
+    color: white;
+    text-align: left;
+}
+
+.orders_id {
+    width: 7%;
+}
+
+.orders_table > tbody {
+    background: #f5ffff;
+}
