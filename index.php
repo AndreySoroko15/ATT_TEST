@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="./css/style.css">
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous">
+    </script> 
 </head>
 <body>
     <div class="container">
@@ -26,21 +27,21 @@
             </select>
         </div>
     </form>
+    <input id="search" type="text" placeholder="Поиск...">
     <Table class="orders_table">
-        
         <thead>
             <tr>
                 <th class="orders_id">id</th>
                 <th class="orders_name">Имя</th>
                 <th class="orders_title">Товар</th>
-                <th class="orders_cost">Стоимость</th>
+                <th class="orders_cost">Цена</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
     </Table>
     </div>
-            
+    <script src="./js/search.js"></script>           
     <script>
         $(document).ready(function() {
             var selectedSort = <?php echo json_encode($_POST['sort'] ?? "default"); ?>;
@@ -66,7 +67,11 @@
                                 "</tr>";
                     
                             tbody.append(table);
+
+                            
                         });
+
+                        getJson(response)
                     },
 
                     error: function(error) {
@@ -77,21 +82,13 @@
 
             ajaxRequest();
 
-            // для отправки формы при выборе необходимого значения сортировки
-            $('#sort').on('change', function() {
+            $('#sort', '#sorting_form').on('change submit', function(e) {
+                e.preventDefault();
                 selectedSort = $('#sort').val();
                 console.log(selectedSort);
-                $('#sorting_form').submit();
                 ajaxRequest();
             });
-
-            $('#sorting_form').on('submit', function(e) {
-            e.preventDefault();
-            ajaxRequest()
-            
-        })
     });
 </script>
-
 </body>
 </html>
