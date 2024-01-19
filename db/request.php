@@ -5,8 +5,6 @@ require_once 'db_queries.php';
 
 $sortingMethod = isset($_POST['sortingMethod']) ? $_POST['sortingMethod'] : 'default';
 
-// die($_POST["$sortingMethod"]);
-
 $config = parse_ini_file('config/config.ini');
 
 $dbConnection = new DBConnection($config);
@@ -17,6 +15,3 @@ $orders = $dbQueries->getFromDB($sortingMethod);
 
 
 echo json_encode($orders);
-
-// header('Locaton: /?sort=' . $_POST['sort']);
-

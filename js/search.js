@@ -1,30 +1,3 @@
-
-    // // alert('search');
-    // function tableToArray(tableId) {
-    //   const dataArray = [];
-    //   $(tableId + ' tr').each(function(row, tr){
-    //     dataArray[row] = [];
-    //     $(tr).find('td').each(function(col, td){
-    //       dataArray[row].push($(td).text());
-    //     });
-    //   });
-    //   return dataArray;
-    // }
-
-    // // $('#sort').on('change', function() {
-    // //     const selectedOption = $(this).val();
-    // //     const myTableArray = tableToArray('.orders_table');
-    // //     console.log('Массив для', selectedOption, ':', myTableArray);
-    // //     // Далее вы можете выполнять дополнительные действия с массивом
-    // // });
-    // function handleTable() {
-    //     const selectedOption = $('#sort').val();
-    //     const myTableArray = tableToArray('#myTable');
-    //     console.log('Массив для', selectedOption, ':', myTableArray);
-    //     // Далее вы можете выполнять дополнительные действия с массивом
-    //   }
-
-
     function getJson(data) {
         $('#search').on('input', function() {
             let tbody = $('.orders_table tbody');

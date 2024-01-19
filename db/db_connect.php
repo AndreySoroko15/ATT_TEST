@@ -5,7 +5,6 @@ class DBConnection {
 
     public function __construct($config) 
     {
-        // $config = parse_ini_file('config/config.ini');
         $this->connection = new mysqli ($config['host'], 
                                         $config['login'], 
                                         $config['pass'], 
