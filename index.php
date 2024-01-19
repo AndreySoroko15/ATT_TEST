@@ -13,33 +13,34 @@
 </head>
 <body>
     <div class="container">
-    <form action="./db/request.php" id="sorting_form" method="POST">
-        <div class="select_sort">
-            <select name="sort" id="sort">
-                <option value="id_asc" selected>Id &#8593</option>
-                <option value="id_desc">Id &#8595</option>
-                <option value="name_asc">Имя &#8593</option>
-                <option value="name_desc">Имя &#8595</option>
-                <option value="title_asc">Товар &#8593</option>
-                <option value="title_desc">Товар &#8595</option>
-                <option value="cost_asc">Стоимость &#8593</option>
-                <option value="cost_desc">Стоимость &#8595</option>
-            </select>
-        </div>
-    </form>
-    <input id="search" type="text" placeholder="Поиск...">
-    <Table class="orders_table">
-        <thead>
-            <tr>
-                <th class="orders_id">id</th>
-                <th class="orders_name">Имя</th>
+        <form action="./db/request.php" id="sorting_form" method="POST">
+            <div class="select_sort">
+                <select name="sort" id="sort">
+                    <option value="id_asc" selected>Id &#8593</option>
+                    <option value="id_desc">Id &#8595</option>
+                    <option value="name_asc">Имя &#8593</option>
+                    <option value="name_desc">Имя &#8595</option>
+                    <option value="title_asc">Товар &#8593</option>
+                    <option value="title_desc">Товар &#8595</option>
+                    <option value="cost_asc">Стоимость &#8593</option>
+                    <option value="cost_desc">Стоимость &#8595</option>
+                </select>
+            </div>
+        </form>
+        <input id="search" type="text" placeholder="Поиск...">
+        <Table class="orders_table">
+            <thead>
+                <tr>
+                    <th class="orders_id">id</th>
+                    <th class="orders_name">Имя</th>
                 <th class="orders_title">Товар</th>
-                <th class="orders_cost">Цена</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </Table>
+                    <th class="orders_cost">Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </Table>
+        <p id="noSearchMatches"></p>
     </div>
     <script src="./js/search.js"></script>           
     <script>

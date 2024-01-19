@@ -49,6 +49,11 @@
             // console.log(filteredArray);
             tbody.empty();
 
+            if(filteredArray.length === 0) {
+                // console.log('пусто');
+                $('#noSearchMatches').text('Совпадений не найдено :(');
+            }
+
             filteredArray.forEach(function(val) {
                 let tableRow = "<tr>" +
                     "<td>" + val.order_id + "</td>" +
